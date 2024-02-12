@@ -1,0 +1,87 @@
+/* Variables */
+:root{
+
+    /*White #ffffff*/
+	--white-h:0;
+	--white-s:0%;
+	--white-l:100%;
+	--white:var(--white-h), var(--white-s), var(--white-l);
+	
+	/*Black #000000*/
+	--black-h:0;
+	--black-s:0%;
+	--black-l:0%;
+	--black:var(--black-h), var(--black-s), var(--black-l);	
+
+	/*Text Color #021229*/
+	--text-color-h:215;
+	--text-color-s:91%;
+	--text-color-l:8%;
+	--text-color:var(--text-color-h), var(--text-color-s), var(--text-color-l);	    
+
+    /* Primary #3F51B5 */
+	--primary-h:231;
+	--primary-s:48%;
+	--primary-l:48%;
+	--primary:var(--primary-h), var(--primary-s), var(--primary-l);	
+    
+    /* Primary Light #DCEDFE */
+	--primary-light-h:210;
+	--primary-light-s:94%;
+	--primary-light-l:93%;
+	--primary-light:var(--primary-light-h), var(--primary-light-s), var(--primary-light-l);	  
+
+    /* Primary Dark #0D1546 */
+	--primary-dark-h:232;
+	--primary-dark-s:69%;
+	--primary-dark-l:16%;
+	--primary-dark:var(--primary-dark-h), var(--primary-dark-s), var(--primary-dark-l);	     
+    
+    /* Redish Pink #FF3750 */
+	--redish-pink-h:353;
+	--redish-pink-s:100%;
+	--redish-pink-l:61%;
+	--redish-pink:var(--redish-pink-h), var(--redish-pink-s), var(--redish-pink-l);	  
+    
+	/*Blue #29A7EC*/
+	--blue-h:201;
+	--blue-s:84%;
+	--blue-l:54%;
+	--blue:var(--blue-h), var(--blue-s), var(--blue-l);	    
+
+	/*Purple #6B37DA*/
+	--purple-h:259;
+	--purple-s:69%;
+	--purple-l:54%;
+	--purple:var(--purple-h), var(--purple-s), var(--purple-l);	
+    
+	/*Green #29DEA3*/
+	--green-h:160;
+	--green-s:73%;
+	--green-l:52%;
+	--green:var(--green-h), var(--green-s), var(--green-l);	   
+
+}
+
+/* Color */
+.white{color: hsl(var(--white));}
+.black{color: hsl(var(--black));}
+.primary{color: hsl(var(--primary));}
+.primary-light{color: hsl(var(--primary-light));}
+.primary-dark{color: hsl(var(--primary-dark));}
+.redish-pink{color: hsl(var(--redish-pink));}
+.blue{color: hsl(var(--blue));}
+.purple{color: hsl(var(--purple));}
+.green{color: hsl(var(--green));}
+
+/* Background Color */
+.white-bg{background-color: hsl(var(--white));} 
+.black-bg{background-color: hsl(var(--black));}
+.primary-bg{background-color: hsl(var(--primary));}
+.primary-light-bg{background-color: hsl(var(--primary-light));}
+.primary-dark-bg{background-color: hsl(var(--primary-dark));}
+.redish-pink-bg{background-color: hsl(var(--redish-pink));}
+.blue-bg{background-color: hsl(var(--blue));}
+.purple-bg{background-color: hsl(var(--purple));}
+.green-bg{background-color: hsl(var(--green));}
+

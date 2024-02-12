@@ -1,0 +1,64 @@
+/* Import CSS */
+@import url('font.css');
+@import url('color.css');
+
+/* Variables */
+:root{
+
+    /* Container */
+    --container-width:121rem;
+    --container-padding:3rem;
+
+    /* Header */
+    --header-height:11rem;
+
+    /* Border Color #E7E8EC */
+    --border-color:228, 12%, 92%;
+
+    /* Transition */
+    --transition:150ms;
+
+    /* Button */
+    --button-height:4rem;
+    --button-lg-height:5.6rem;
+
+}
+@media(width < 768px){
+:root{
+
+    /* Container */
+    --container-padding:1.5rem;
+    
+    /* Header */
+    --header-height:7rem;
+
+}
+}
+
+/* Buttons */
+.btn, button.btn{font-family: var(--font-family);}
+.btn{font-size: var(--fs-sm); font-weight: var(--fw-bold); height: var(--button-height); border-radius: 1.2rem; display: inline-flex; align-items: center; justify-content: center; gap:1rem; white-space: nowrap; padding: 0 1.6rem; line-height: 1; transition: var(--transition);}
+.btn.btn-lg{font-size: var(--fs); height: var(--button-lg-height); border-radius: 1.6rem; gap:1rem 1.5rem;}
+.btn.btn-primary{background-color: hsl(var(--primary)); color: hsl(var(--white));}
+.btn.btn-primary:hover, .btn.btn-primary:active{background-color: hsl(var(--primary-dark));}
+
+/* Nav Icon */
+.nav-icon{display:none; align-items:center; width:20px; height:14px; position:relative; cursor:pointer; z-index:9999;}
+.nav-icon::before, .nav-icon::after{transition: all 0.1s linear;}
+.nav-icon::before{position:absolute; left:0; top:0; width:100%; height:2px; background-color:hsl(var(--primary)); content:"";}
+.nav-icon::after{position:absolute; left:0; bottom:0; width:50%; height:2px; background-color:hsl(var(--primary)); content:"";}
+.nav-icon span{display:block; height:2px; background-color:hsl(var(--primary)); transition:all 0.1s linear; flex-grow:1;}
+.nav-icon.active{width:20px; height:20px;}
+.nav-icon.active span{opacity:0; visibility:hidden; background-color:hsl(var(--primary));}
+.nav-icon.active::before{transform:translateY(-50%) rotate(45deg); transform-origin:center center; top:50%; background-color:hsl(var(--primary));}
+.nav-icon.active::after{width:100%; transform:translateY(50%) rotate(-45deg); transform-origin:center center; bottom:50%; background-color:hsl(var(--primary));}
+@media(width < 768px){
+	.nav-icon{display:flex; align-items: center; margin-left: 2rem;}	
+}
+
+/* Blur Bg */
+.blur-bg{position: absolute; aspect-ratio: 1; border-radius: 100%; opacity: 15%; filter: blur(50rem); z-index: -1;}
+.blur-bg.blur-bg-redishpink{background-color: hsl(var(--redish-pink));}
+.blur-bg.blur-bg-blue{background-color: hsl(var(--blue));}
+.blur-bg.blur-bg-1{width: 30vw; left: -4rem; top: calc(var(--header-height) + 4rem);}
+.blur-bg.blur-bg-2{width: 60vw; right: 0; top: calc(var(--header-height) + 4rem); transform:translateX(25%);}

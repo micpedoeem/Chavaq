@@ -1,0 +1,117 @@
+/* Reset CSS */
+*, *::before, *::after{box-sizing: border-box;}
+html, body{font-size:62.5%; min-height:100vh; line-height:1.5; padding:0; margin:0; overflow-x:hidden;}
+ul{margin:0; padding:0;}
+li{list-style:none;}
+img{max-width:100%; display:block;}
+p, label{margin:0; padding:0;}
+a, span{display:inline-block;}
+a, a:hover{text-decoration:none;}
+h1, h2, h3, h4, h5, h6{padding:0; margin:0; font-weight:normal;}
+figure{margin:0;}
+input:focus, button:focus, a:focus{outline:none;}
+textarea:focus{outline:none;}
+button{padding:0; border:0; margin:0; background:none;}
+
+/* Varibales */
+:root{
+
+    /* Font Family */
+    --font-family: "Inter", sans-serif;
+
+    /* Font Weight */
+    --fw-light:300;
+    --fw-regular:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+    --fw-extrabold:800;
+    --fw-black:900;
+
+    /* Font Size */
+    --fs:1.6rem;
+    --fs-sm:1.4rem;
+    --fs-xs:1.2rem;
+
+    /* Headding */
+    --h1:5.2rem;
+    --h2:4rem;
+    --h5:2.4rem;
+
+}
+@media(width < 1200px){
+:root{
+
+    /* Headding */
+    --h1:4.6rem;
+    --h2:3.6rem;
+    --h5:2.2rem;
+
+}
+}
+@media(width < 992px){
+:root{
+
+    /* Headding */
+    --h1:4.2rem;
+    --h2:3.3rem;
+    --h5:2rem;
+
+}
+}
+@media(width < 768px){
+:root{
+
+    /* Font Size */
+    --fs:1.5rem;
+    --fs-sm:1.3rem;
+
+    /* Headding */
+    --h1:3.8rem;
+    --h2:3rem;
+    --h5:1.8rem;
+
+}
+}
+@media(width < 576px){
+:root{
+
+    /* Headding */
+    --h1:3.4rem;
+    --h2:2.7rem;
+
+}
+}
+@media(width < 481px){
+:root{
+
+    /* Headding */
+    --h1:3rem;
+    --h2:2.5rem;
+
+}
+}
+
+/* Font Family */
+.font-family{font-family: var(--font-family);}
+
+/* Font Weight */
+.fw-light{font-weight: var(--fw-light);}
+.fw-regular{font-weight: var(--fw-regular);}
+.fw-medium{font-weight: var(--fw-medium);}
+.fw-semibold{font-weight: var(--fw-semibold);}
+.fw-bold{font-weight: var(--fw-bold);}
+.fw-extrabold{font-weight: var(--fw-extrabold);}
+.fw-black{font-weight: var(--fw-black);}
+
+/* Font Size */
+.fs{font-size: var(--fs);}
+.fs-sm{font-size: var(--fs-sm);}
+
+/* Headding */
+h1{font-size: var(--h1); line-height: 1.38;}
+h2{font-size: var(--h2); line-height: 1.4;}
+h5{font-size: var(--h5); line-height: 1.33;}
+
+/* Paragraph */
+p{font-size: var(--fs); line-height: 1.5; color: hsl(var(--text-color));}
