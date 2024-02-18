@@ -51,8 +51,8 @@
                     <p class="label">Ready to revolutionize your communication?</p>
                     <h1>Unleash SMS Mastery - <br> Request your <span>Demo</span> today!</h1>
                     <div class="demo-form">
-                        <input type="text" placeholder="Email Address">
-                        <button type="submit" class="btn btn-primary">Request a Demo</button>
+						<input type="text" name="email" placeholder="Email Address">
+						<button id="demoButton" type="submit" class="btn btn-primary">Request a Demo</button>
                     </div>
                 </div>
             </div>
@@ -182,8 +182,8 @@
         </div>
         <div class="section-content" data-aos="fade-up">
             <div class="demo-form m-auto">
-                <input type="text" placeholder="Email Address">
-                <button type="submit" class="btn btn-primary">Request a Demo</button>
+				<input type="text" name="email" placeholder="Email Address">
+				<button id="demoButton" type="submit" class="btn btn-primary">Request a Demo</button>
             </div>
         </div>
     </div>
@@ -202,6 +202,52 @@
 
 <div class="blur-bg blur-bg-redishpink blur-bg-1"></div>
 <div class="blur-bg blur-bg-blue blur-bg-2"></div>
+
+<script>
+    // Attach the event listener to the button with the specified ID
+    document.getElementById('demoButton').addEventListener('click', function () {
+        // Get the email value from the input
+        const email = document.querySelector('[name="email"]').value;
+
+        // Check if the email is not empty
+        if (email.trim() !== '') {
+            // Create a FormData object and append the email data
+            const formData = new FormData();
+            formData.append('email', email);
+
+            // Use fetch to send the form data to the webhook endpoint
+            fetch('https://hook.us1.make.com/l5h8wdvdy3me2tppjhv398i93zvdsku3', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Handle the response if needed
+                console.log(response);
+
+                if (response.ok) {
+                    // Display a success message to the user
+                    alert('Thank you! A team member will be in touch with you.');
+                } else {
+                    // Display an error message if the submission was not successful
+                    alert('Oops! Something went wrong. Please try again.');
+                }
+            })
+            .catch(error => {
+                // Handle errors if any
+                console.error(error);
+
+                // Display an error message to the user
+                alert('Oops! Something went wrong. Please try again.');
+            });
+        } else {
+            // Display an alert if the email is empty
+            alert('Please enter your email address.');
+        }
+    });
+</script>
+
+
+
 
 <!-- AOS Scroll Animation JS -->
 <script src="js/aos.js"></script>
