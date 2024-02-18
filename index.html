@@ -51,8 +51,8 @@
                     <p class="label">Ready to revolutionize your communication?</p>
                     <h1>Unleash SMS Mastery - <br> Request your <span>Demo</span> today!</h1>
                     <div class="demo-form">
-						<input type="text" name="email" placeholder="Email Address">
-						<button id="demoButton" type="submit" class="btn btn-primary">Request a Demo</button>
+						<input id="emailInput1" type="text" name="email" placeholder="Email Address">
+						<button id="demoButton1" type="submit" class="btn btn-primary">Request a Demo</button>
                     </div>
                 </div>
             </div>
@@ -182,8 +182,8 @@
         </div>
         <div class="section-content" data-aos="fade-up">
             <div class="demo-form m-auto">
-				<input type="text" name="email" placeholder="Email Address">
-				<button id="demoButton" type="submit" class="btn btn-primary">Request a Demo</button>
+				<input id="emailInput2" type="text" name="email" placeholder="Email Address">
+				<button id="demoButton2" type="submit" class="btn btn-primary">Request a Demo</button>
             </div>
         </div>
     </div>
@@ -204,10 +204,9 @@
 <div class="blur-bg blur-bg-blue blur-bg-2"></div>
 
 <script>
-    // Attach the event listener to the button with the specified ID
-    document.getElementById('demoButton').addEventListener('click', function () {
+    function handleDemoButtonClick(buttonId, inputId) {
         // Get the email value from the input
-        const email = document.querySelector('[name="email"]').value;
+        const email = document.getElementById(inputId).value;
 
         // Check if the email is not empty
         if (email.trim() !== '') {
@@ -243,6 +242,15 @@
             // Display an alert if the email is empty
             alert('Please enter your email address.');
         }
+    }
+
+    // Attach the event listener to the buttons with the specified IDs
+    document.getElementById('demoButton1').addEventListener('click', function () {
+        handleDemoButtonClick('demoButton1', 'emailInput1');
+    });
+
+    document.getElementById('demoButton2').addEventListener('click', function () {
+        handleDemoButtonClick('demoButton2', 'emailInput2');
     });
 </script>
 
