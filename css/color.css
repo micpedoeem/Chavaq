@@ -109,14 +109,14 @@
 .second-demo-form input {
     margin: 5px; /* Add some spacing between the input and button */
     width: calc(100% - 10px); /* Make the input take up the remaining width */
-    padding: 10px; /* Add some padding for a comfortable input box size */
+    padding: 6px; /* Add some padding for a comfortable input box size */
 }
 
 /* Adjust styling for the button within the second demo form */
 .second-demo-form button {
     margin: 5px; /* Add some spacing between the input and button */
-    width: 10px; /* Make the button take up only as much width as needed */
-    padding: 10px; /* Add some padding for a comfortable button size */
+    width: 6px; /* Make the button take up only as much width as needed */
+    padding: 6px; /* Add some padding for a comfortable button size */
 }
 
 
