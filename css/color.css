@@ -91,3 +91,15 @@
     margin-top: 10px; /* Adjust the margin as needed */
     /* Add any other styles you want for the success message */
 }
+
+/* Add styling for the second demo form */
+.second-demo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Add styling for the second success message */
+.second-success-message {
+    text-align: center;
+}
