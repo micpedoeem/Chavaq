@@ -92,14 +92,22 @@
     /* Add any other styles you want for the success message */
 }
 
-/* Add styling for the second demo form */
-.second-demo-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /* Add styling for the second success message */
 .second-success-message {
     text-align: center;
+}
+
+/* Adjust styling for the second demo form */
+.second-demo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Adjust styling for the input and button within the second demo form */
+.second-demo-form input,
+.second-demo-form button {
+    margin: 5px; /* Add some spacing between the input and button */
 }
