@@ -228,6 +228,8 @@
                 if (response.ok) {
                     // Display a success message below the button
                     document.getElementById(successMessageId).innerHTML = 'Thank you! One of our team members will be in touch with you shortly.';
+					// Hide the button's parent container after successful submission
+					document.getElementById(buttonId).closest('.demo-form').style.display = 'none';
                 } else {
                     // Display an error message below the button
                     document.getElementById(successMessageId).innerHTML = 'Oops! Something went wrong. Please try again.';
