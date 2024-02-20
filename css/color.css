@@ -97,16 +97,27 @@
     text-align: center;
 }
 
-/* Adjust styling for the input and button within the second demo form */
+/* Adjust styling for the second demo form */
+.second-demo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto; /* Add some margin for spacing and centering */
+}
+
+/* Adjust styling for the input within the second demo form */
 .second-demo-form input {
     margin: 5px; /* Add some spacing between the input and button */
     width: calc(100% - 10px); /* Make the input slightly less than full width to allow space for the button */
     padding: 10px; /* Add some padding for a comfortable input box size */
 }
 
+/* Adjust styling for the button within the second demo form */
 .second-demo-form button {
     margin: 5px; /* Add some spacing between the input and button */
     width: calc(100% - 10px); /* Make the button slightly less than full width to align with the input */
     padding: 10px; /* Add some padding for a comfortable button size */
 }
+
 
