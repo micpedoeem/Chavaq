@@ -85,3 +85,9 @@
 .purple-bg{background-color: hsl(var(--purple));}
 .green-bg{background-color: hsl(var(--green));}
 
+/* Additional Styles */
+.success-message {
+    color: green; /* or any color you prefer */
+    margin-top: 10px; /* Adjust the margin as needed */
+    /* Add any other styles you want for the success message */
+}

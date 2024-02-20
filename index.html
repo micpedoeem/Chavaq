@@ -204,7 +204,7 @@
 <div class="blur-bg blur-bg-blue blur-bg-2"></div>
 
 <script>
-    function handleDemoButtonClick(buttonId, inputId) {
+    function handleDemoButtonClick(buttonId, inputId, successMessageId) {
         // Get the email value from the input
         const email = document.getElementById(inputId).value;
 
@@ -224,19 +224,19 @@
                 console.log(response);
 
                 if (response.ok) {
-                    // Display a success message to the user
-                    alert('Thank you! A team member will be in touch with you.');
+                    // Display a success message below the button
+                    document.getElementById(successMessageId).innerHTML = 'Thank you! One of our team members will be in touch with you shortly.';
                 } else {
-                    // Display an error message if the submission was not successful
-                    alert('Oops! Something went wrong. Please try again.');
+                    // Display an error message below the button
+                    document.getElementById(successMessageId).innerHTML = 'Oops! Something went wrong. Please try again.';
                 }
             })
             .catch(error => {
                 // Handle errors if any
                 console.error(error);
 
-                // Display an error message to the user
-                alert('Oops! Something went wrong. Please try again.');
+                // Display an error message below the button
+                document.getElementById(successMessageId).innerHTML = 'Oops! Something went wrong. Please try again.';
             });
         } else {
             // Display an alert if the email is empty
@@ -246,13 +246,14 @@
 
     // Attach the event listener to the buttons with the specified IDs
     document.getElementById('demoButton1').addEventListener('click', function () {
-        handleDemoButtonClick('demoButton1', 'emailInput1');
+        handleDemoButtonClick('demoButton1', 'emailInput1', 'successMessage1');
     });
 
     document.getElementById('demoButton2').addEventListener('click', function () {
-        handleDemoButtonClick('demoButton2', 'emailInput2');
+        handleDemoButtonClick('demoButton2', 'emailInput2', 'successMessage2');
     });
 </script>
+
 
 
 
