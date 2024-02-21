@@ -114,8 +114,8 @@
 
 /* Adjust styling for the button within the second demo form */
 .second-demo-form button {
-    margin: 5px; /* Add some spacing between the input and button */
-    width: 6px; /* Make the button take up only as much width as needed */
+    margin: 6px; /* Add some spacing between the input and button */
+    width: 8px; /* Make the button take up only as much width as needed */
     padding: 6px; /* Add some padding for a comfortable button size */
 }
 
