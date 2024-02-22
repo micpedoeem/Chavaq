@@ -39,7 +39,7 @@
 .btn, button.btn{font-family: var(--font-family);}
 .btn{font-size: var(--fs-sm); font-weight: var(--fw-bold); height: var(--button-height); border-radius: 1.2rem; display: inline-flex; align-items: center; justify-content: center; gap:1rem; white-space: nowrap; padding: 0 1.6rem; line-height: 1; transition: var(--transition);}
 .btn.btn-lg{font-size: var(--fs); height: var(--button-lg-height); border-radius: 1.6rem; gap:1rem 1.5rem;}
-.btn.btn-primary{background-color: hsl(var(--primary)); color: hsl(var(--white));}
+.btn.btn-primary{background-color: hsl(var(--primary)); color: white;}
 .btn.btn-primary:hover, .btn.btn-primary:active{background-color: hsl(var(--primary-dark));}
 
 /* Nav Icon */
